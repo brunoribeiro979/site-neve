@@ -111,6 +111,23 @@ body {
   text-align: center;
 }
 
+h1::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .main-container h1 {
   padding: 60px 0;
   font-size: 4rem;
@@ -125,7 +142,7 @@ body {
     height: 400px;
   }
   .main-container h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .main-container p {
     font-size: 1rem;
