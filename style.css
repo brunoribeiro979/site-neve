@@ -139,7 +139,7 @@ h1::after {
 
 @media (max-width: 739px) {
   .main {
-    height: 400px;
+    height: 440px;
   }
   .main-container h1 {
     font-size: 2.2rem;
@@ -203,12 +203,15 @@ h1::after {
 @media (max-width: 739px) {
   .sobre {
     flex-direction: column;
-    margin-top: 40px;
   }
   .sobre p {
     margin: 0 auto;
     margin-bottom: 20px;
     border-bottom: 2px solid #252525;
+  }
+  .sobre .ultimo {
+    border-bottom: none;
+    margin-bottom: 0px;
   }
 }
 
@@ -326,7 +329,7 @@ h1::after {
 
 @media (max-width: 739px) {
   .branding .section-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .branding .section-container img {
     width: 300px;
@@ -626,4 +629,23 @@ h1::after {
   .copy-container {
     text-align: center;
   }
+}
+
+/*  ANIMA SCROLL  */
+[data-anime] {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+[data-anime='left'] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime='right'] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }

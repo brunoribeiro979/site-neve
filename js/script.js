@@ -1,12 +1,5 @@
-const titulo = document.querySelector('h1');
+import initTypeWritter from './modules/typeWritter.js';
+import initAnimaScroll from './modules/animaScroll.js';
 
-function typeWriter(elemento) {
-  const textoArray = elemento.innerHTML.split('');
-  elemento.innerHTML = '';
-  textoArray.forEach((letra, index) => {
-    setTimeout(() => (elemento.innerHTML += letra), 75 * index);
-  });
-  console.log(textoArray);
-}
-
-typeWriter(titulo);
+initTypeWritter();
+initAnimaScroll();
